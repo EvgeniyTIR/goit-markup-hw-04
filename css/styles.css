@@ -131,23 +131,30 @@ header{
   padding-top: 32px;
   padding-bottom: 32px;  
 }
-.link-tel{  
- 
+.link-tel{ 
+  fill: #757575; 
   margin-right: 10px;  
 }
-
+.link:hover .link-tel,
+.link:focus .link-tel{
+  fill:var(--accent-color)
+}
 .auth  .link:hover,
 .auth  .link:focus{
   color: var(--accent-color);  
-  
-}
+  }
 /*-------------------------блок заказа услуг--------------------*/
-.hero {
-  background-color:rgba(47, 48, 58, 0.4);
+.hero {  
   text-align: center;
-  background-image: url(../images/background-Img.jpg);
+  background-color:rgba(47, 48, 58, 0.4)  ;
+  background-image:linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4) ),
+   url(../images/background-Img.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  
 
   padding-top: 200px;
   padding-bottom: 200px;
@@ -203,12 +210,24 @@ margin-left: 30px;
   font-size: 14px;
   line-height: 1.71;
   /* or 171% */
-
+       
   margin: 0;
   padding: 0;
 }
 /* иконки мейн блока*/ 
-
+.icon-conteiner{
+  background-color: #F5F4FA;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+.future-icon{
+  width: 70px;
+  height: 70px;
+  
+}
 /* Чем мы занимаемся */
 .section.doing{
   padding-top: 0;
@@ -239,6 +258,14 @@ margin-left: 30px;
  .team {
    display: flex;
    text-align: center;     
+ }
+ .team > .item{
+   background: #FFFFFF;
+/* material shadow v1 */
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+ 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
  }
  .team .item + .item{
    margin-left: 30px;
@@ -279,8 +306,24 @@ margin-left: 30px;
   /* identical to box height */
   margin: 0;
   padding: 0;
+  margin-bottom: 16px;
 }
-/* Подвал */
+/*---------social Нашей команді----------*/
+.team-social{
+  display: flex;
+  padding: 0 30px;
+}
+.social-block{
+  display: inline-block;
+  border-radius: 50%;
+  padding: 12px;
+  background-color: var(--accent-color);
+  }
+.team-social .item + .item{
+  margin-left: 10px;
+}
+
+/* ---------------Подвал-------------- */
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
@@ -332,7 +375,6 @@ margin-left: 30px;
 .filter-link {
   text-decoration: none;
 }
-
 .filter-button {
   color: var(--primary-title-text);
   font-weight: 500;
