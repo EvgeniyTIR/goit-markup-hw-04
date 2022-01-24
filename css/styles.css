@@ -35,6 +35,11 @@ body {
 header{
   outline: 1px solid #ECECEC;
 }
+img {
+  display: block;
+   max-width: 100%;
+   height: auto
+}
 .list {
   padding: 0;
   margin: 0;
@@ -308,21 +313,73 @@ border-radius: 0px 0px 4px 4px;
   padding: 0;
   margin-bottom: 16px;
 }
-/*---------social Нашей команді----------*/
+/*---------social Нашей команды----------*/
 .team-social{
   display: flex;
-  padding: 0 30px;
-}
-.social-block{
-  display: inline-block;
-  border-radius: 50%;
-  padding: 12px;
-  background-color: var(--accent-color);
+  justify-content: center;
   }
+.social-link{
+  display: flex;
+  justify-content: center;
+  padding: 12px;;
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
+  color:#AFB1B8;
+  }
+.social-link:hover,
+.social-link:focus{
+  background-color: var(--accent-color);
+  color:var(--primary-white-color) ;
+  }
+.icon-diagram-1{
+  fill: currentColor;
+  }  
 .team-social .item + .item{
   margin-left: 10px;
 }
+/*<!-- ---------- Наши постоянные клиенты -------- -->*/
+.clients{
+  text-align: center;
 
+}
+.clients-title{
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 36px;
+  line-height:calc(42/36);
+  color: var(--primary-title-text);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+.clients-list {
+  display: flex;
+}
+.clients-link{
+  display: block;
+  box-sizing: border-box;
+  width: 170px;
+  height: 92px;
+  padding-top: 16px;
+  border: 1px solid #AFB1B8;  
+  border-radius: 4px;
+}
+.clients-item + .clients-item{
+  margin-left: 30px;
+}
+.clients-link:focus,
+.clients-link:hover{
+  background-color:var(--primary-white-color);
+  color: var(--accent-color);
+  border: 1px solid  var(--accent-color); 
+}
+.union{
+  fill: #AFB1B8;
+}
+.clients-link:focus .union,
+.clients-link:hover .union{
+  fill:currentColor ;
+}
 /* ---------------Подвал-------------- */
 .footer {
   background-color: #2f303a;
@@ -365,6 +422,15 @@ border-radius: 0px 0px 4px 4px;
   /* or 171% */
   margin:0;
   padding: 0;  
+}
+/*Footer socials*/
+.invite{
+
+}
+.invite-title{
+  margin: 0;
+  padding: 0;
+
 }
 /* --ПОРТФОЛИО-- 
 Фильтр списка проєктов */
@@ -451,8 +517,4 @@ border-radius: 0px 0px 4px 4px;
   padding-top:94px;
   padding-bottom: 94px;
  } 
- img {
-  display: block;
-   max-width: 100%;
-   height: auto
-}
+ 
