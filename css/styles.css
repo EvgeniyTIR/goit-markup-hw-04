@@ -40,6 +40,12 @@ img {
    max-width: 100%;
    height: auto
 }
+ /*паддинг секций*/
+ .section {
+  padding-top:94px;
+  padding-bottom: 94px;
+ } 
+ 
 .list {
   padding: 0;
   margin: 0;
@@ -388,16 +394,21 @@ border-radius: 0px 0px 4px 4px;
 }
 .logo-footer {
   display: block;
+  width: 145px;
+  height: 31px;
   color: var(--primary-white-color);
   font-family: Raleway;
   font-weight: bold;
   font-size: 26px;
-  line-height: 1.9;
+  line-height: calc(31/26);
   text-decoration: none;
   margin:0;
-  padding: 0;  
+  padding: 0;    
   margin-bottom: 20px;
 }
+.logo-text{
+  
+  }
 .adress-place {
   color: var(--primary-white-color);
   font-style: normal;
@@ -424,14 +435,44 @@ border-radius: 0px 0px 4px 4px;
   padding: 0;  
 }
 /*Footer socials*/
-.invite{
 
+.footer-flex{
+  display: flex;
+  
 }
-.invite-title{
+.invite{
+padding-top: 12px;
+min-width: 206px;
+min-height: 80px;
+margin-left: 70px;
+}
+.invite-title{ 
+  color: var(--primary-white-color); 
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  line-height: calc(16/14);
+  text-transform: uppercase;
   margin: 0;
   padding: 0;
-
+  margin-bottom: 20px;
 }
+.social-link-footer{
+  display: flex;
+  justify-content: center;
+  padding: 12px;;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color:#AFB1B8;
+  }
+.social-link-footer .icon-diagram-1{
+  fill:var(--primary-white-color)
+}  
+.social-link-footer:hover,
+.social-link-footer:focus{
+  background-color: var(--accent-color);
+  color:var(--primary-white-color) ;
+  }
 /* --ПОРТФОЛИО-- 
 Фильтр списка проєктов */
 .filter-section {
@@ -512,9 +553,3 @@ border-radius: 0px 0px 4px 4px;
   margin: 0;
   /*padding: 0 24px 20px 24px;*/
 }
- /*паддинг секций*/
- .section {
-  padding-top:94px;
-  padding-bottom: 94px;
- } 
- 
